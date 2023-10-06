@@ -1,1 +1,28 @@
 # comp206
+# asgn 1 q1 q1.
+mkdir Fall2023
+cd Fall2023 # in Fall2023 directory
+mkdir COMP206
+cd COMP206 # in COMP206 (sub)directory
+mkdir lectures
+mkdir labs
+mkdir guides
+mkdir assignments
+cd assignments # in assignments directory
+mkdir assign1
+cd assign1 # in assign1 directory
+mkdir backup
+mkdir docs
+mkdir database
+mkdir src
+mkdir tests
+cd docs # in docs directory
+mkdir html
+mkdir txt
+cd .. # goes to previous directory (assign1)
+cd src
+mkdir sh
+mkdir c
+cd # goes back to parent directory
+tree -F Fall2023 # prints huge tree of directories & files
+
