@@ -1,0 +1,7 @@
+#!/bin/bash
+# Fatin Chowdhury(261178502)
+
+#Q2
+echo "Please enter your sentence:"
+read inputfromuser
+echo "Your input has $(echo "$inputfromuser" | wc -w) words and $(echo "$inputfromuser" | wc -c) characters"
