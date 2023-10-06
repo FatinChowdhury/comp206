@@ -1,0 +1,57 @@
+#!/bin/bash
+#Q1
+# Fatin Chowdhury (261178502)
+
+
+#Q2
+sourcedirectory="$1"
+targetdirectory="$2"
+
+i=0
+for file in $(ls -r "$sourcedirectory")
+do
+	if [[ -f "$sourcedirectory/$file" ]]
+	then 
+		((i++))
+		filename=$(basename "$file")
+		filenamewithnumbers="$i . $filename"
+		cp "$sourcedirectory/$file" "$targetdirectory/$filenamewithnumbers"
+	fi
+done
+
+#Q3
+
+if [[ -z $1 || -z $2 ]]
+then
+        echo "Error: Expected two input parameters."
+        echo "Usage: ./sortedcopy.sh <sourcedirectory> <targetdirectory>"
+        exit 1
+fi
+
+#Q4
+
+if [[ ! -d "$sourcedirectory" ]]
+then
+        echo "Error: Input parameter #1 "$1" is not a directory."
+	echo "Usage: ./sortedcopy.sh <sourcedirectory> <targetdirectory>"
+        exit 2
+fi
+
+
+#Q5
+
+yes="y"
+if [[ -d "$targetdirectory" ]]
+then
+	echo -n "Directory "$2" already exists. Overwrite? (y/n)"
+	read answer
+	if [[ "$answer" = "$yes" ]]
+	then
+		rm -r "$targetdirectory"
+		mkdir "$targetdirectory"
+	else
+		exit 3
+	fi
+fi
+
+# code kinda doesnt work
