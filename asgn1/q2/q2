@@ -1,0 +1,4 @@
+pwd
+cp C-editing-with-VIM-HOWTO C-editing-with-VIM-HOWTO.txt
+mv C-editing-with-VIM-HOWTO C-editing-with-VIM-HOWTO.txt
+ls
