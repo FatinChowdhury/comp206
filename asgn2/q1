@@ -1,0 +1,28 @@
+#!/bin/bash
+# Fatin Chowdhury (261178502)
+
+#Q2
+pwd
+ls *.txt
+
+#Q3
+mkdir backup
+cd backup
+echo "Moved to backup directory"
+pwd
+
+#Q4
+cp ../*.txt backup
+echo "Copied all text files to backup directory"
+
+#Q5
+echo "Current backup:" > date.txt
+date >> date.txt
+cat date.txt
+
+#Q6
+tar -zcvf txtbackup.tgz *.txt
+echo "Created archive txtarchive.tgz"
+ls -l
+
+
