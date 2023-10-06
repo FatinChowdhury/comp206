@@ -1,0 +1,6 @@
+ls -la | grep -i 'VIM' # im in /home/2018/mberub20/comp206_public/guides
+cp C-editing-with-VIM-HOWTO /home/2023/fchowd/Fall2023/COMP206/guides
+cd
+cd /home/2023/fchowd/Fall2023/COMP206/guides
+pwd
+ls -la
