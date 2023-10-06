@@ -1,0 +1,4 @@
+pwd # prints absolute path
+cd Fall2023/COMP206/assignments/assign1
+pwd # prints the whole path mentioned above
+ls -la
