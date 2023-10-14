@@ -1,0 +1,11 @@
+int main(int argc, char *argv[]) {
+  // argc is like $#
+  // argv[1] is like $1
+  // argv[2] is like $2, etc.
+  // Note: You will see later that char * in C is like a string, so argv is an array of strings
+  int n;
+  for(n=0; n<argc; n++) {
+    printf("%s\n", argv[n]);
+  }
+  return 0;
+}
