@@ -2,8 +2,9 @@
 int main(void)
 {
         int x,y,z;
+        char d = 'a';
         x=3;
         y = x+1;
-        printf("The number is : %d\n", y);
-
+        printf("The character is : %c\n", d);
+        printf("The number is: %d\n", d);
 }
