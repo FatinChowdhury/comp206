@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(void){
+        int age = 1;
+        switch(age) {
+                case 1: puts("Too young");
+                        break;
+                case 2: puts("You are 2");
+                case 3: puts("Bring a parent");
+                        break;
+                default:
+                        puts("You can drive the car");
+        }
+}
