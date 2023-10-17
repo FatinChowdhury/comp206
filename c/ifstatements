@@ -1,0 +1,7 @@
+#include<stdio.h>
+#include<math.h>
+typedef int number;
+int main(void){
+        int x = 5;
+        if (x<10) puts("X is less than 10\n");
+}
