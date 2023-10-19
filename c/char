@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main(void){
+        char c;
+        c =getchar();
+        printf("Your input was: ");
+        putc(c, stdout);
+        return 0;
+}
