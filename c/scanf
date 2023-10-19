@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(void){
+
+        char array[30];
+        fgets(array, 30, stdin);
+
+        scanf("%s", array);
+
+        return 0;
+        }
