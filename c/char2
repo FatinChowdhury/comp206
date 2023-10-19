@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(void){
+        char c,d;
+
+        c = 'a';
+        d = 'b';
+        printf("Here's a char: %c. Here's another %c", c, d);
+
+        return 0;
+}
