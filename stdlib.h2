@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+char beingCareful[300];
+int age;
+float salary;
+printf("What is your age?: ");
+fgets(beingCareful,300,stdin);
+age = atoi(beingCareful);
+printf("What is your salary?: ");
+gets(beingCareful);
+salary = atof(beingCareful);
+return EXIT_SUCCESS;
+}
