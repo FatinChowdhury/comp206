@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(void){
+        char c,d;
+
+        c = 'a';
+        d = 'b';
+
+        float age = 12.5;
+        printf("Here's a float: %5.1f \n", age);
+        return 0;
+        }
