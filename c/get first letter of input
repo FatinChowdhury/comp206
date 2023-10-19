@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(void){
+        char array[30];
+
+        fgets(array, 30, stdin);
+
+
+        printf("The first character is %c \n", array[0]);
+        return 0;
+}
