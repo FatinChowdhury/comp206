@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+        int a[5]; // on mimi integers are 4 bytes, so array of 5 has 5*4 bytes
+        printf("The array itself has size %ld\n", sizeof(a)); // prints out 20
+        return 0;
+
+}
