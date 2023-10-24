@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(void){
+        int a[5] = {0,1,2,3,4};
+        int search = 4;
+        char t[5];
+
+        printf("Please enter the character that you want to search: ");
+        fgets(t,5,stdin);
+
+        // could also use scanf("%d", &search);, but it is less safe.
+        // it also doesnt read a new line
+        search = ato(t);
+        int index = -1;
+        for (int i=0; i<5; i++){
+                if (a[i] == search){
+                        index == i
+                }
+        }
+        if (index != -1){
+                printf("The index of value %d is %d\n", search, index);
+        }
+        else {
+                printf("%d is not present in the array\n", search);
+        }
+        return 0;
+}
