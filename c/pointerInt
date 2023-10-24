@@ -6,5 +6,10 @@ int main(void){
         printf(%d\n", i); // prints out 5
         printf("%d\n", *p); // also prints out 5
 
+        *p = 4; // i = 4
+
+        printf(%d\n", i); // prints out 4
+        printf("%d\n", *p); // also prints out 4
+
         return 0;
 }
