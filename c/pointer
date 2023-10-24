@@ -3,6 +3,7 @@ int main(void){
         char c;
         char *p;
         p = &c;
+        
         // you can also say
         // char c;
         // char *p = &c;
