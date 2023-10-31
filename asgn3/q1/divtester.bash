@@ -13,3 +13,9 @@
 # or "Exited with unexpected return code: X (Expected 2)"; X is the error code in your C program
 
 # can put as many tests as you want.
+echo "Test 1: not divisible & not increasing"
+OUTPUT=$(echo "10 5 7" | ./divisible)
+EXPECTED="Not divisible & Not increasing"
+
+[[ $EXPECTED==$OUTPUT ]]
+
