@@ -14,4 +14,4 @@ if [ $return_code -eq 1 ]; then
 else
         echo "$output"
         echo "Exited with unexpected return code: $return_code (Expected 1)"
-
+fi
