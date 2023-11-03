@@ -9,7 +9,7 @@ int main(void){
 
         // could also use scanf("%d", &search);, but it is less safe.
         // it also doesnt read a new line
-        search = ato(t);
+        search = atoi(t);
         int index = -1;
         for (int i=0; i<5; i++){
                 if (a[i] == search){
