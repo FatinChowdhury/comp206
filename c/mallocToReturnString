@@ -1,0 +1,18 @@
+//Last time, we saw that if we wanted to return a new array or string from a function,
+// we either had to give it a buffer array for the function to fill with the array/string,
+// or declare it statically, since otherwise the function releases the memory once it
+// ends. Another way is to allocate the memory ourselves:
+
+#include <stdio.h>
+#include <stdlib.h>
+char *get_string(int size){
+  printf("Enter a string of at most size %d:\n", size);
+  char *str = malloc ( size + 1 ); // +1 for null termin.
+  fgets(str, size, stdin);
+  return str;
+}
+int main(void) {
+  char *input = get_string(50);
+  printf("%s", input);
+  free(input); // Must be freed!
+}
