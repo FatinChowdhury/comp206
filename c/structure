@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+/*
 struct {
         char name[30];
         int age;
@@ -28,3 +28,22 @@ int main(void){
         strcpy(b.name, "Bob"); 
         printf("%s is %d years old, %s is %d years old", a.name, a.age, b.name, b.age);
 }
+
+
+
+
+
+better to do: */
+struct PERSON { // PERSON is the tag
+        char name[30];
+        int age;
+        float salary;
+}; // no var declaration.
+int main(void){
+        struct PERSON a;
+        // other lines of code, say a.age = 2;
+        struct PERSON b;
+}
+
+
+
