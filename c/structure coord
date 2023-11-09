@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+struct COORD {
+        int x;
+        int y;
+
+}a; // everything above are members of the structure a
+int main(void){
+        struct COORD a,b;
+        a.x = 7;
+        a.y = 8;
+        b = a;
+        printf("The coord of b is (%d, %d)\n", b.x, b.y);
+}
