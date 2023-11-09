@@ -11,5 +11,5 @@ int main(void){
         a.x = 7;
         a.y = 8;
         b = a;
-        printf("The coord of b is (%d, %d)\n", b.x, b.y);
+        printf("The coord of b is (%d, %d)\n", b.x, b.y); // prints out(7,8)
 }
