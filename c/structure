@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+struct {
+        char name[30];
+        int age;
+        float salary;
+}a; // everything above are members of the structure a
+int main(void){
+        a.age=25;
+        strcpy(a.name, "John");
+        printf("%s is %d years old\n", a.name, a.age);
+}
+
+
+
+
+we could also do:
+struct {
+        char name[30];
+        int age;
+        float salary;
+}a,b ; // for both a and b.
+int main(void){
+        a.age=25;
+        strcpy(a.name, "John");
+        b.age = 30;
+        strcpy(b.name, "Bob"); 
+        printf("%s is %d years old, %s is %d years old", a.name, a.age, b.name, b.age);
+}
