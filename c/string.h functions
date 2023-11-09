@@ -1,0 +1,9 @@
+// dest= ['a', 'b', 'c', 'd', 'e', '\0']
+        // src = ['z', 'y', '\0']
+        // strcpy(dest, src);
+        // dest = ['z', 'y', '\0', 'd', 'e', '\0']
+        // printf("%s", dest); // successfully zy
+        // strlen(dest); // outputs 2 because its everything before null terminator
+        // might be confusing when you try dest[4] (still 'e')
+        // undefinedArray = ['a', 'b', 'c']
+        // printf("5s", undefinedArray) // undefined; no null character
