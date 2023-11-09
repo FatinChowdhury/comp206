@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+int main(void){
+    char *a = "bob";
+    char b[] = "bob";
+    if (strcmp(a,b) == 0){
+        puts("They're the same");
+    }
+    else{
+        puts("They're not the same");
+    }
+}
