@@ -9,4 +9,9 @@ int main(void){
     else{
         puts("They're not the same");
     }
+    // int x = strcmp("bob", "mary"); // <0  (because b is before m)
+    // int x = strcmp("mary", "bob"); // >0  (because m is after b)
+    // int x = strcmp("mark", "mary", 3); // 0 (mar = mar)
+    // int x = strlen("mary") // x = 4
+
 }
