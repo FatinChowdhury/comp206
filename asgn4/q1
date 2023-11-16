@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct PHONE_RECORD {
+        char name[50];
+        char birthdate[12];
+        char phone[15];
+};
+
+struct PHONE_RECORD phonebook[10];
+int phonebook_length = 0;
+
+int addRecord(char name[], char birth[], char phone[]){
+        int i = 0;
+        if (phonebook_length >= 10){
+                return 1;
+        }
+
+        strcpy(phonebook[phonebook_length].name, name);
+        strcpy(phonebook[phonebook_length].birthdate, birth);
+        strcpy(phonebook[phonebook_length].phone, phone);
+
+        phonebook_length++;
+
+        return 0;
+}
+
+int listRecords(void){
+        int i = 0;
+        for (i = 0; i<phonebook_length; i++){
+                printf("---- NAME ----    ---- BIRTH DATE ----    ---- PHONE ----\n %s", phonebook[i].name, phonebook[i].birthdate, phonebook[i].phone);
+        }
+        return 0;      
+}
+
+int main(){
+        addRecord("John", "01/01/1990", "1234567890");
+        addRecord("Mary", "01/01/1991", "1234567891");
+
+        for (int i = 0; i<phonebook_length; i++){
+                printf("Name: %s, Birthdate: %s, Phone: %s\n", phonebook[i].name, phonebook[i].birthdate, phonebook[i].phone);
+        }
+        return 0;
+}
+
