@@ -1,0 +1,76 @@
+#include "poly.h"
+#include "utils.h"
+
+struct PolyTerm *head = NULL; // head of polynomial LinkedList
+
+int addPolyTerm(int coeff, int expo)
+{
+    // TODO: [Fatin Chowdhury]
+    struct PolyTerm *cur = head, *prev = NULL;
+
+    while (cur!=NULL && cur->expo <= expo){
+	    prev = cur;
+	    cur = cur->next;
+    }
+
+    if (cur != NULL && cur->expo == expo){ // if curNode not null && its exponent
+					   // equal to exponent of new term
+	    cur->coeff += coeff; 
+	    if (cur->coeff == 0){ 
+		    if (prev==NULL) head = cur->next; // updating the list because coeff is 0
+		    else prev->next = cur->next;
+		    free(cur);
+	    }
+	    return 0;
+    }
+
+    // allocate memory
+    struct PolyTerm* newNode = (struct PolyTerm*) malloc(sizeof(struct PolyTerm));
+    if (newNode == NULL) return -1; // if doesnt allocate well
+    
+    // setting newNode with given values
+    newNode->coeff = coeff;
+    newNode->expo = expo;
+    newNode->next = cur; // insert newNode before cur
+
+    // if inserting at beginning or middle of list
+    if (prev == NULL) head = newNode;
+    else prev->next = newNode;
+    return 0;
+}
+
+void displayPolynomial()
+{
+    // TODO: [David Smith]
+    if (head == NULL) { // case where polynomial is empty
+	    puts("Empty polynomial, no terms found.");
+        free(head);
+        exit(1);
+    }
+
+    struct PolyTerm *p = head; // set pointer to first term
+
+    while (p != NULL) { // traverse list until last term is reached
+	    printf("%dx%d", p->coeff, p->expo); // prints one term in order: coefficientxexponent
+
+	    if (p->next != NULL && p->next->coeff >= 0)
+            putchar('+'); // adds + before next term
+
+	    p = p->next; // pointer moves to next term to print it
+    }
+}
+
+int evaluatePolynomial(int x)
+{
+    // TODO: Thomas Nguyen
+    int s = 0;  // accumulator for summing the evaluated terms
+    struct PolyTerm *p = head;  // pointer initialized to the start of the list of terms
+
+    /* Just loops through and sums all coeff * x^expo */
+    do {
+        s += p->coeff * powi(x, p->expo);
+        p = p->next;  // move on to the next term
+    } while (p != NULL);
+
+    return s;
+}
